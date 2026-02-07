@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: mcq-backend
+    env: docker
+    dockerfilePath: Dockerfile.backend
+    plan: free
+    autoDeploy: true
+    ports:
+      - 8000
+
+  - type: web
+    name: mcq-frontend
+    env: docker
+    dockerfilePath: Dockerfile.frontend
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: BACKEND_URL
+        value: https://mcq-backend.onrender.com
+    ports:
+      - 8501
