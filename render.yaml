@@ -5,8 +5,8 @@ services:
     dockerfilePath: Dockerfile.backend
     plan: free
     autoDeploy: true
-    ports:
-      - 8000
+    # Render automatically detects the port from your Dockerfile CMD/EXPOSE
+    # so you don’t need "ports:" here
 
   - type: web
     name: mcq-frontend
@@ -17,5 +17,3 @@ services:
     envVars:
       - key: BACKEND_URL
         value: https://mcq-backend.onrender.com
-    ports:
-      - 8501
