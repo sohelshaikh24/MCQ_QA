@@ -16,4 +16,4 @@ services:
     autoDeploy: true
     envVars:
       - key: BACKEND_URL
-        value: https://mcq-backend.onrender.com
+        value: https://mcq-backend-hggx.onrender.com
