@@ -7,10 +7,10 @@ on:
         description: "test using workflow dispatch"
         required : true
         
-  push:
-    branches:
-      - main
-      - test1
+  # push:
+  #   branches:
+  #     - main
+  #     - test1
 
 jobs:
   trigger:
