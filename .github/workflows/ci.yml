@@ -1,6 +1,12 @@
 name: Deploy to Render
 
 on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "test using workflow dispatch"
+        required : true
+        default : 'dev'
   push:
     branches:
       - main
