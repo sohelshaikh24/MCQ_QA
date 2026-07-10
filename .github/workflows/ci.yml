@@ -6,7 +6,7 @@ on:
       environment:
         description: "test using workflow dispatch"
         required : true
-        default : 'dev'
+        
   push:
     branches:
       - main
